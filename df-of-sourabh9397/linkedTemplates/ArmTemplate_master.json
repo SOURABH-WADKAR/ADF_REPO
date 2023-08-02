@@ -1,0 +1,174 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "df-of-sourabh9397"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
+		},
+		"AzureSqlDatabase2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase2'"
+		},
+		"AzureSqlDatabase3_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase3'"
+		},
+		"LS_ADLS_Connection_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_ADLS_Connection'"
+		},
+		"LS_BLOB_Connection_2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_BLOB_Connection_2'"
+		},
+		"LS_Blob_Connection_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_Blob_Connection'"
+		},
+		"LS_Blob_Connection04_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_Blob_Connection04'"
+		},
+		"LS_Output_Tables_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_Output_Tables'"
+		},
+		"LS_SQL_Connection01_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_SQL_Connection01'"
+		},
+		"LS_SQL_DATABASE_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_SQL_DATABASE'"
+		},
+		"LS_SQL_MultipleFiles_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_SQL_MultipleFiles'"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsofsourabh.dfs.core.windows.net/"
+		},
+		"LS_ADLS_Connection_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsofsourabh.dfs.core.windows.net/"
+		},
+		"LS_Output_Tables_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsofsourabh.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "df-of-sourabh9397_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
+					"AzureSqlDatabase1_connectionString": {
+						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
+					},
+					"AzureSqlDatabase2_connectionString": {
+						"value": "[parameters('AzureSqlDatabase2_connectionString')]"
+					},
+					"AzureSqlDatabase3_connectionString": {
+						"value": "[parameters('AzureSqlDatabase3_connectionString')]"
+					},
+					"LS_ADLS_Connection_accountKey": {
+						"value": "[parameters('LS_ADLS_Connection_accountKey')]"
+					},
+					"LS_BLOB_Connection_2_connectionString": {
+						"value": "[parameters('LS_BLOB_Connection_2_connectionString')]"
+					},
+					"LS_Blob_Connection_connectionString": {
+						"value": "[parameters('LS_Blob_Connection_connectionString')]"
+					},
+					"LS_Blob_Connection04_connectionString": {
+						"value": "[parameters('LS_Blob_Connection04_connectionString')]"
+					},
+					"LS_Output_Tables_accountKey": {
+						"value": "[parameters('LS_Output_Tables_accountKey')]"
+					},
+					"LS_SQL_Connection01_connectionString": {
+						"value": "[parameters('LS_SQL_Connection01_connectionString')]"
+					},
+					"LS_SQL_DATABASE_connectionString": {
+						"value": "[parameters('LS_SQL_DATABASE_connectionString')]"
+					},
+					"LS_SQL_MultipleFiles_connectionString": {
+						"value": "[parameters('LS_SQL_MultipleFiles_connectionString')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"LS_ADLS_Connection_properties_typeProperties_url": {
+						"value": "[parameters('LS_ADLS_Connection_properties_typeProperties_url')]"
+					},
+					"LS_Output_Tables_properties_typeProperties_url": {
+						"value": "[parameters('LS_Output_Tables_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "df-of-sourabh9397_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'df-of-sourabh9397_ArmTemplate_0')]"
+			]
+		}
+	]
+}

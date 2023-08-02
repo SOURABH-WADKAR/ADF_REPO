@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "df-of-sourabh9397"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase3_connectionString": {
+			"value": ""
+		},
+		"LS_ADLS_Connection_accountKey": {
+			"value": ""
+		},
+		"LS_BLOB_Connection_2_connectionString": {
+			"value": ""
+		},
+		"LS_Blob_Connection_connectionString": {
+			"value": ""
+		},
+		"LS_Blob_Connection04_connectionString": {
+			"value": ""
+		},
+		"LS_Output_Tables_accountKey": {
+			"value": ""
+		},
+		"LS_SQL_Connection01_connectionString": {
+			"value": ""
+		},
+		"LS_SQL_DATABASE_connectionString": {
+			"value": ""
+		},
+		"LS_SQL_MultipleFiles_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://adlsofsourabh.dfs.core.windows.net/"
+		},
+		"LS_ADLS_Connection_properties_typeProperties_url": {
+			"value": "https://adlsofsourabh.dfs.core.windows.net/"
+		},
+		"LS_Output_Tables_properties_typeProperties_url": {
+			"value": "https://adlsofsourabh.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

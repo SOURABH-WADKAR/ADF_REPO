@@ -1,0 +1,32 @@
+{
+	"name": "DS_Copy_Multiple_Files",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Blob_Connection",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SourceFile": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().SourceFile",
+					"type": "Expression"
+				},
+				"container": "unprocessed-container"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,9 @@
+{
+	"name": "df-of-sourabh9397",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4974e37f-4940-4d9c-ae87-527c8ecd16c4",
+		"tenantId": "81835ecc-71d2-46e1-b1c6-59dc865f6b28"
+	}
+}

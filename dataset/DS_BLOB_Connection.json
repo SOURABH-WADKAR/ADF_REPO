@@ -1,0 +1,113 @@
+{
+	"name": "DS_BLOB_Connection",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Blob_Connection04",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SourceFile": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().SourceFile",
+					"type": "Expression"
+				},
+				"container": "unprocessed-container"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "rank_order",
+				"type": "String"
+			},
+			{
+				"name": "rank",
+				"type": "String"
+			},
+			{
+				"name": "name",
+				"type": "String"
+			},
+			{
+				"name": "scores_overall",
+				"type": "String"
+			},
+			{
+				"name": "scores_overall_rank",
+				"type": "String"
+			},
+			{
+				"name": "scores_teaching",
+				"type": "String"
+			},
+			{
+				"name": "scores_teaching_rank",
+				"type": "String"
+			},
+			{
+				"name": "scores_international_outlook",
+				"type": "String"
+			},
+			{
+				"name": "scores_international_outlook_rank",
+				"type": "String"
+			},
+			{
+				"name": "scores_industry_income",
+				"type": "String"
+			},
+			{
+				"name": "scores_industry_income_rank",
+				"type": "String"
+			},
+			{
+				"name": "scores_research",
+				"type": "String"
+			},
+			{
+				"name": "scores_research_rank",
+				"type": "String"
+			},
+			{
+				"name": "scores_citations",
+				"type": "String"
+			},
+			{
+				"name": "scores_citations_rank",
+				"type": "String"
+			},
+			{
+				"name": "location",
+				"type": "String"
+			},
+			{
+				"name": "aliases",
+				"type": "String"
+			},
+			{
+				"name": "subjects_offered",
+				"type": "String"
+			},
+			{
+				"name": "closed",
+				"type": "String"
+			},
+			{
+				"name": "unaccredited",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
